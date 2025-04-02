@@ -8,7 +8,7 @@ image:
   repository: adalataistagingacr.azurecr.io/adalat-backend
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "94b2e15487"
+  tag: v1.0.130
 
 nameOverride: ""
 fullnameOverride: ""
