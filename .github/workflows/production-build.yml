@@ -1,4 +1,4 @@
-name: manual approval workflow 3
+name: document-service
 
 on:
   push:
