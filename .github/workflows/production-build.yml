@@ -1,0 +1,24 @@
+name: manual approval workflow 3
+
+on:
+  push:
+   branch: alpha
+
+permissions:
+  contents: write 
+  packages: read
+  pull-requests: write 
+  issues: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: production 
+    steps:
+      - name: Checkout selected branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Deploy Application
+        run: echo "🚀 Deploying commit ${{ github.event.inputs.commit_sha }} to production environment..."
